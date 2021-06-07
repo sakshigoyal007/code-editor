@@ -2,3 +2,39 @@ body{
   margin:0;
 }
 
+.content{
+  display: flex;
+  height: 50vh;
+}
+
+.split-title{
+  display: flex;
+  padding: .5rem;
+  padding-left: 1rem;
+  color: white;
+  background-color: #1F2023;
+  justify-content: space-between;
+}
+
+.input-code{
+  background-color: #3C3E44;
+}
+
+.split-container{
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #3C3E44;
+  flex-basis: 0;
+  flex-grow: 1;
+
+}
+
+.code-wrapper{
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.CodeMirror{
+  height: 100% !important;
+}

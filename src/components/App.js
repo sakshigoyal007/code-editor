@@ -4,10 +4,20 @@ import Editor from './Editor';
 
 
 function App() {
-  let srcUrl="https://ideone.com";
+  // let srcUrl="https://ideone.com";
+
   const [html, setHtml]=useState('');
   const [js, setJs]=useState('');
   const [css, setCss]=useState('');
+
+  const srcScript=
+`
+<html>
+  <body>${html}</body>
+  <style>${css}</style>
+  <script>${js}</script>
+</html>
+`
 
 
   return (
@@ -18,9 +28,10 @@ function App() {
         <Editor name="JS" value={js} language="javascript" onChange={setJs} />
       </div>
       <div className="content">
-        <iframe src={srcUrl}
+        <iframe src={srcScript}
           title="output"
           sandbox="allow-scripts"
+          frameBorder="0"
           width="100%"
           height="100%"
         />
