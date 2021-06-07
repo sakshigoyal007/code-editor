@@ -5,15 +5,19 @@ import Editor from './Editor';
 
 function App() {
   let srcUrl="https://ideone.com";
+  const [html, setHtml]=useState('');
+  const [js, setJs]=useState('');
+  const [css, setCss]=useState('');
+
 
   return (
     <div className="App">
-      <div className="pane top-pane">
-        <Editor/>
-        <Editor/>
-        <Editor/>
+      <div className="content input-code">
+        <Editor name="HTML" value={html} language="xml" onChange={setHtml} />
+        <Editor name="CSS" value={css} language="css" onChange={setCss} />
+        <Editor name="JS" value={js} language="javascript" onChange={setJs} />
       </div>
-      <div className="bottom-pane">
+      <div className="content">
         <iframe src={srcUrl}
           title="output"
           sandbox="allow-scripts"
