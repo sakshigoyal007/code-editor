@@ -38,3 +38,11 @@ body{
 .CodeMirror{
   height: 100% !important;
 }
+
+.editor-button{
+  cursor: pointer;
+  background: none;
+  color: white;
+  margin-left: 0.5rem;
+  border: none;
+}

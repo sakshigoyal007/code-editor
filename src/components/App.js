@@ -10,8 +10,7 @@ function App() {
   const [js, setJs]=useState('');
   const [css, setCss]=useState('');
 
-  const srcScript=
-`
+  const srcScript=`
 <html>
   <body>${html}</body>
   <style>${css}</style>
@@ -28,7 +27,7 @@ function App() {
         <Editor name="JS" value={js} language="javascript" onChange={setJs} />
       </div>
       <div className="content">
-        <iframe src={srcScript}
+        <iframe srcDoc={srcScript}
           title="output"
           sandbox="allow-scripts"
           frameBorder="0"
