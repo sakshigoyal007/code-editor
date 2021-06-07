@@ -46,3 +46,12 @@ body{
   margin-left: 0.5rem;
   border: none;
 }
+
+.split-container.collapsed{
+  flex-grow: 0;
+}
+
+.split-container.split-container.collapsed .CodeMirror-scroll{
+  position: absolute;
+  overflow: hidden !important;
+}
